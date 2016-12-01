@@ -13,6 +13,7 @@ if __name__ == "__main__":
 
 	#get the first 10 pages of puns
 	for i in xrange(1, 10):
-		page = urllib2.urlopen(baseLink + i)
-
+		page = urllib2.urlopen(baseLink + str(i))
+		print page.read()
+		break
 
