@@ -18,8 +18,10 @@ class FindPuns:
 			total = 0
 			for line in f:
 				if tri == 0:
+					line = line[:len(line)-1]
 					sentence = self.processline(line.split(" "))
 				elif tri == 1:
+					line = line[:len(line)-1]
 					if line == sentence[len(sentence)-1]:
 						correct += 1
 					total += 1
