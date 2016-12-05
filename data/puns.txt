@@ -1,104 +1,306 @@
+<<<<<<< HEAD
 Did you hear about the optometrist who fell into a lens grinder and made a spectacle of himself?
-It's OK to watch an elephant bathe as they usually have their trunks on.
-An elephant's opinion carries a lot of weight.
-Energizer Bunny arrested -- charged with battery.
-The duck said to the bartender, 'Put it on my bill.'
-In the winter my dog wears his coat, but in the summer he wears his coat and pants.
-Male deer have buck teeth.
-A horse is a very stable animal.
-I was going to tell you a joke about a blunt arrow but really there is no point.
-I used to go out with a girl the was secretly obsessed with graphs. She was always plotting behind my back.
-My bakery burned down last night, and now my business is toast.
-I’m no photographer, but I can picture us together.
-The experienced carpenter really nailed it.
-Apple is designing a new automatic car, but they’re having trouble installing windows.
-I wonder how letters ever get to the recipient when the envelopes are stationery.
-I was fired from my first job working in an orange juice factory but was fired because i couldn't concentrate.
-There was once a cross-eyed teacher who couldn’t control his pupils.
-My math teacher called me average. How mean!
-The bee got married when he found his honey.
-I used to be a banker but I lost interest.
-Insect puns bug me.
-My leaf blower doesn’t work, it sucks.
-I bought shoes from a drug dealer and I've been tripping all day.
-Prisoners use cell phones to call each other
-Cinderella was thrown off the basketball team because she ran away from the ball.
-I'd tell you a chemistry joke but I know I wouldn't get a reaction.
-I couldn't work out how to fasten my seat belt, but then it clicked. 
+=======
 An optometrist fell into a lens grinder and made a spectacle of himself.
+spectacle
+
+>>>>>>> 5a1b6d68190956971138119b37c8afbd6045efe0
+It's OK to watch an elephant bathe as they usually have their trunks on.
+trunks
+
+An elephant's opinion carries a lot of weight.
+weight
+
+Energizer Bunny arrested -- charged with battery.
+battery 
+
+The duck said to the bartender, 'Put it on my bill.'
+bill
+
+In the winter my dog wears his coat, but in the summer he wears his coat and pants.
+pants
+
+Male deer have buck teeth.
+buck
+
+A horse is a very stable animal.
+stable
+
+I was going to tell you a joke about a blunt arrow but really there is no point.
+point
+
+I used to go out with a girl the was secretly obsessed with graphs. She was always plotting behind my back.
+plotting
+
+My bakery burned down last night, and now my business is toast.
+toast
+
+I’m no photographer, but I can picture us together.
+picture
+
+The experienced carpenter really nailed it.
+nailed
+
+Apple is designing a new automatic car, but they’re having trouble installing windows.
+windows
+
+I wonder how letters ever get to the recipient when the envelopes are stationery.
+stationary
+
+I was fired from my first job working in an orange juice factory but was fired because i couldn't concentrate.
+concentrate
+
+There was once a cross-eyed teacher who couldn’t control his pupils.
+pupils
+
+My math teacher called me average. How mean!
+mean
+
+The bee got married when he found his honey.
+honey
+
+I used to be a banker but I lost interest.
+interest
+
+Insect puns bug me.
+bug
+
+My leaf blower doesn’t work, it sucks.
+sucks
+
+I bought shoes from a drug dealer and I've been tripping all day.
+tripping
+
+Prisoners use cell phones to call each other.
+cell
+
+Cinderella was thrown off the basketball team because she ran away from the ball.
+ball
+
+I'd tell you a chemistry joke but I know I wouldn't get a reaction.
+reaction
+
+I couldn't work out how to fasten my seat belt, but then it clicked. 
+clicked
+
 Two antennas got married; the ceremony wasn't much, but the reception was excellent. 
+reception
+
 I stayed up all night to see where the sun went, and then it dawned on me.
+dawned
+
 A man broke his ankle while tap dancing in the sink.
+tap
+
 The earthquake in Washington obviously was the government’s fault.
+fault
+
 Gardeners always know the ground rules.
+ground
+
 The coffee tasted like mud because it was fresh ground. 
+ground
+
 I used to work for a blanket factory, but the company folded.
+folded
+
 He had a photographic memory that was never developed.
+developed
+
 Relocating to a new home can be a moving experience.
+moving
+
 He fell asleep under the chandelier because he was a light sleeper.
+light
+
 Two banks with different rates have a conflict of interest.
+interest
+
 I used to sell computer parts, but then I lost my drive.
+drive
+
 There was a bear that was hit by an 18-wheeler; it was a grizzly accident.
+grizzly
+
 People either laugh at chemistry jokes or they don't react.
+react
+
 Driving on so many turnpikes is taking its toll.
+toll
+
 A dog gave birth to puppies near the road and was cited for littering.
+littering
+
 Why do ambassadors never get sick because of immunity.
+immunity
+
 The best way to communicate with a fish is to drop them a line.
-A bicycle can stand on its own even when its tired.
+line
+
 I used to sell high heels, till they gave me the boot.
+boot
+
 Old swords never rust, they just lose their temper.
+temper
+
 Old sewage workers never die, they just waste away.
+waste
+
 Broken calculators almost work, they just lose their figures.
+figure
+
 We’re going on a class trip to the Coca-Cola factory, hopefully there’s no pop quiz.
+pop
+
 Old laser physicists never die, they just become incoherent.
+incoherent
+
 Cannibals don't eat clowns because they taste funny.
+funny
+
 I've been to the dentist several times so I know the drill.
-I used to date a sanitation engineer, but I was dumped. 
+drill
+
+I used to date a sanitation engineer, but I was dumped.
+dumped
+
 She was only a whisky maker, but he loved her still.
+still
+
 Old numerical analysts never die, they just get disarrayed.
+<<<<<<< HEAD
 Why is your hand similar to a hardware store? Because it has nails.
 
+=======
+disarrayed
+
+Why is your hand similar to a hardware store? Because it has nails. 
+nails
+>>>>>>> 5a1b6d68190956971138119b37c8afbd6045efe0
 
 Old tanners never die, they just go into hiding.
-All you can get from a pampered cow is spoiled milk. 
-A hacker's relationship always ends in bits 
-Babies of basketball players are always dribbling.
-The dead batteries were given out free of charge.
-An expert farmer is very well known in his field.
-I thought about becoming a witch, so I tried it for a spell. 
-Celebrities are cool because of all their fans.
-The teacher was fired for sleeping with a student; after that, he had no class.
-My cavity wasn't fixed by my regular dentist, but by a guy who was filling in.
-Our social studies teacher says that her globe means the world to her.
-You think he can pull off those tight pants?
-Lightning misbehaves because it's not sure how to conduct itself.
-The seer couldn't predict the future once she went blind because she lost her vision.
-When you pour cement on a burglar, you get a hardened criminal.
-The leopard moved away, so he changed his spots.
-How many sides does a circle have? Two: an inside and an outside.
-Did you hear about the optician was giddy after only two glasses.
-You must know lots to be an auctioneer.
-The wasp told the bee to buzz off.
-Fingers can only grow on palm trees.
-The noodle was very stressed and tried not to strain itself.
-Gullible instruments get played often.
-I used to work in a coffee shop, but I got tired of the daily grind.
-Cartoonist found dead in home. Details are sketchy.
-I don't like mechanical keyboards, they're not my type.
-Rivers are always rich becaus they have two banks.
-I used to be a baker, but I didn't make enough dough.
-The tightrope walker was so upset someone stole his money that he lost his balance.
-The kids playing tennis were making a racket.
-He didn't date laywers, they always lost their appeal.
-Speaking ill of the dead is a grave mistake.
-A cow with no legs is ground beef.
-When she told me I was average, she was just being mean.
-I tried looking for gold, but it didn't pan out.
-Every calendar's days are numbered.
-The math professor went crazy with the blackboard. He did a number on it.
-What did the toy store sign say? Don't feed the animals. They are already stuffed.
-The theory about earthquakes was shakey
-Wheat farmers are people cut from a different grain
-I need you to stall him in the bathroom a while
-Me and geology have a rocky relationship
+hiding
 
+All you can get from a pampered cow is spoiled milk. 
+spoiled
+
+A hacker's relationship always ends in bits.
+bits
+
+Babies of basketball players are always dribbling.
+dribbling
+
+The dead batteries were given out free of charge.
+charge
+
+An expert farmer is very well known in his field.
+field
+
+I thought about becoming a witch, so I tried it for a spell. 
+spell
+
+Celebrities are cool because of all their fans.
+fans
+
+The teacher was fired for sleeping with a student; after that, he had no class.
+class
+
+My cavity wasn't fixed by my regular dentist, but by a guy who was filling in.
+filling
+
+Our social studies teacher says that her globe means the world to her.
+world
+
+You think he can pull off those tight pants?
+tight
+
+Lightning misbehaves because it's not sure how to conduct itself.
+conduct
+
+The seer couldn't predict the future once she went blind because she lost her vision.
+vision
+
+When you pour cement on a burglar, you get a hardened criminal.
+hardened
+
+The leopard moved away, so he changed his spots.
+spots
+
+Did you hear about the optician was giddy after only two glasses.
+<<<<<<< HEAD
+You must know lots to be an auctioneer.
+=======
+glasses
+
+You must know lots to be an auctioneer.
+lots
+
+>>>>>>> 5a1b6d68190956971138119b37c8afbd6045efe0
+The wasp told the bee to buzz off.
+buzz
+
+Fingers can only grow on palm trees.
+palm
+
+The noodle was very stressed and tried not to strain itself.
+strain
+
+Gullible instruments get played often.
+played
+
+I used to work in a coffee shop, but I got tired of the daily grind.
+grind
+
+Cartoonist found dead in home. Details are sketchy.
+sketchy
+
+I don't like mechanical keyboards, they're not my type.
+type
+
+Rivers are always rich becaus they have two banks.
+banks
+
+I used to be a baker, but I didn't make enough dough.
+doug
+
+The tightrope walker was so upset someone stole his money that he lost his balance.
+balance
+
+The kids playing tennis were making a racket.
+racket
+
+He didn't date laywers, they always lost their appeal.
+appeal
+
+Speaking ill of the dead is a grave mistake.
+grace
+
+A cow with no legs is ground beef.
+ground
+
+When she told me I was average, she was just being mean.
+mean
+
+I tried looking for gold, but it didn't pan out.
+pan
+
+Every calendar's days are numbered.
+numbered
+
+The math professor went crazy with the blackboard. He did a number on it.
+number
+
+What did the toy store sign say? Don't feed the animals. They are already stuffed.
+stuffed 
+
+The theory about earthquakes was shakey
+shakey
+
+Wheat farmers are people cut from a different grain
+grain
+
+I need you to stall him in the bathroom a while
+stall
+
+Me and geology have a rocky relationship
+rocky

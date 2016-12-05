@@ -1,9 +1,0 @@
-Unformatted Notes from our meeting
-
-Scope: Given that there is a homographic pun in the sentence, find it's position
-
-
-Features Ideas:
--Word Sense Scores
--Sentence Position
--
