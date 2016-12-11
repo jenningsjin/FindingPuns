@@ -7,7 +7,7 @@ import sys
 from nltk.corpus import wordnet as wn
 
 class FindPuns:
-	def __init__(self, filename):		
+	def __init__(self, filename):
 		self.correct = []
 		self.guesses = []
 		self.stopwords = ['a','all','an','and','any','are','as','at','be','been','but','by ','few','from','for','have','he','her','here','him','his','how','i','in','is','it','its','many','me','my','none','of','on ','or','our','she','some','the','their','them','there','they','that ','this','to','us','was','what','when','where','which','who','why','will','with','you','your']
@@ -20,7 +20,7 @@ class FindPuns:
 
 
 	def wordnet(filename):
-		print "something works"		
+		print "something works"
 
 
 
