@@ -148,7 +148,7 @@ waste
 Broken calculators almost work, they just lose their figures.
 figure
 
-We’re going on a class trip to the Coca-Cola factory, hopefully there’s no pop quiz.
+We're going on a class trip to the Coca-Cola factory, hopefully there’s no pop quiz.
 pop
 
 Old laser physicists never die, they just become incoherent.
@@ -263,7 +263,7 @@ He didn't date laywers, they always lost their appeal.
 appeal
 
 Speaking ill of the dead is a grave mistake.
-grace
+grave
 
 A cow with no legs is ground beef.
 ground
