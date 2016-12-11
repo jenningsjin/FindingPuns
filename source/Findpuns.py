@@ -3,65 +3,82 @@
 # 	Justin Kim
 # 	Ian Lin
 # 	Grace Wu
+# This is the main driver, only put driver related code here
 import sys
-from nltk.corpus import wordnet as wn
+import re
+from stop_words import get_stop_words
+import numpy as np
+# from ianFile import ianScoreFunction
 
+# constants
+pathToPuns = '../data/puns.txt'
+stopWords = get_stop_words('en')
 class FindPuns:
-	def __init__(self, filename):
-		self.correct = []
-		self.guesses = []
-		self.stopwords = ['a','all','an','and','any','are','as','at','be','been','but','by ','few','from','for','have','he','her','here','him','his','how','i','in','is','it','its','many','me','my','none','of','on ','or','our','she','some','the','their','them','there','they','that ','this','to','us','was','what','when','where','which','who','why','will','with','you','your']
+	def __init__(self):
+		# full pun
+		self.input = []
+		# tokenized input
+		self.x = []
+		# output, list of predicted pun words
+		self.y = []
+		# same shape as x, every token of every pun will have a score
+		self.scores = []
+		# weights for the scores
+		self.W = []
 
-		# self.sentenceindex(filename)
+	def readInput(self):
+		# format of file repeats every 3 lines
+		# 1. pun 2. pun word 3. blank line
+		with open('../data/puns.txt') as f:
+			for line in f.read().splitlines():
+				# ignore blank lines
+				if not line:
+					continue
+				# pun
+				if ' ' in line:
+					self.input.append(line)
+					self.x.append(self.tokenize(line))
+				# pun word
+				else:
+					self.y.append(line)
 
-		self.wordnet(filename)
+	# lowercases, splits on spaces and punctuation, and removes stopword
+	def tokenize(self, context):
+		# split on spaces, commas, ?, !, :, ;, ',
+		# update as necessary
+	    pattern = '\.|,| |\?|\!|\:|\;|\''
+	    return [token.lower() for token in re.split(pattern, context)
+				if token and token.lower() not in stopWords]
+		# TODO: maybe remove tokens that aren't in the dictionary (couldn't becomes couldn t)
 
+	def findPuns(self):
+		self.predictions = []
+		for tokens in self.x:
+			scores = []
+			#scores.append(ianScoreFunction(tokens))
+			#scores.append(graceScoreFunction(tokens))
+			#scores.append(justinScoreFunction(tokens))
+			#scores.append(jenningsScoreFunction(tokens))
+			#scores.append(wordLocationScoreFunction(tokens))
+			# lets try scoring to pick the last token
+			scores = [0]*len(tokens)
+			scores[-1] = 1
+			scores = self.squashAndNormalizeScores(scores)
+			self.predictions.append(tokens[np.argmax(scores)])
+		totalCount = 0
+		wrongCount = 0
+		for p, target in zip(self.predictions, self.y):
+			totalCount += 1
+			if p != target:
+				wrongCount += 1
+		print('total count is ' + str(totalCount) + ' wrong ' + str(wrongCount))
 
-
-
-	def wordnet(filename):
-		print "something works"
-
-
-
-
-	# def sentenceindex(self, filename):
-	# 	tri = 0
-	# 	with open(filename) as f:
-	# 		sentence = []
-	# 		word = ""
-	# 		correct = 0
-	# 		total = 0
-	# 		for line in f:
-	# 			if tri == 0:
-	# 				line = line[:len(line)-1]
-	# 				sentence = self.processline(line.split(" "))
-	# 			elif tri == 1:
-	# 				line = line[:len(line)-1]
-	# 				if line == sentence[len(sentence)-1]:
-	# 					correct += 1
-	# 				total += 1
-	# 			elif tri == 2:
-	# 				tri = -1
-	# 			tri += 1
-
-	# 		print "Total: " + str(total)
-	# 		print "Correct: " + str(correct)
-	# 		print "Percentage accuracy: " + str(float(correct)/total)
-
-	def processline(self, sentencelist):
-		sentencereturn = []
-		for word in sentencelist:
-			if word not in self.stopwords:
-				sentencereturn.append(self.process(word))
-		return sentencereturn
-
-	def process(self, word):
-		for char in word:
-			if char in "\"?!.(),:;'":
-				word = word.replace(char, '')
-		return word.lower()
+	# scores is a 2d vector, each row contains scores from a separate scoring function
+	def squashAndNormalizeScores(self, scores):
+		# TODO: for now, we simply weight the scores evenly (just sum up rows)
+		return np.sum(np.atleast_2d(scores), axis=0, keepdims=True)
 
 if __name__ == "__main__":
-	trainfile = sys.argv[1]
-	FindPuns(trainfile)
+	findpuns = FindPuns()
+	findpuns.readInput()
+	findpuns.findPuns()

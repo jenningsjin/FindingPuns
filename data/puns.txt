@@ -11,7 +11,7 @@ An elephant's opinion carries a lot of weight.
 weight
 
 Energizer Bunny arrested -- charged with battery.
-battery 
+battery
 
 The duck said to the bartender, 'Put it on my bill.'
 bill
@@ -34,13 +34,13 @@ plotting
 My bakery burned down last night, and now my business is toast.
 toast
 
-I’m no photographer, but I can picture us together.
+I'm no photographer, but I can picture us together.
 picture
 
 The experienced carpenter really nailed it.
 nailed
 
-Apple is designing a new automatic car, but they’re having trouble installing windows.
+Apple is designing a new automatic car, but they're having trouble installing windows.
 windows
 
 I wonder how letters ever get to the recipient when the envelopes are stationery.
@@ -49,7 +49,7 @@ stationary
 I was fired from my first job working in an orange juice factory but was fired because i couldn't concentrate.
 concentrate
 
-There was once a cross-eyed teacher who couldn’t control his pupils.
+There was once a cross-eyed teacher who couldn't control his pupils.
 pupils
 
 My math teacher called me average. How mean!
@@ -64,7 +64,7 @@ interest
 Insect puns bug me.
 bug
 
-My leaf blower doesn’t work, it sucks.
+My leaf blower doesn't work, it sucks.
 sucks
 
 I bought shoes from a drug dealer and I've been tripping all day.
@@ -79,10 +79,10 @@ ball
 I'd tell you a chemistry joke but I know I wouldn't get a reaction.
 reaction
 
-I couldn't work out how to fasten my seat belt, but then it clicked. 
+I couldn't work out how to fasten my seat belt, but then it clicked.
 clicked
 
-Two antennas got married; the ceremony wasn't much, but the reception was excellent. 
+Two antennas got married; the ceremony wasn't much, but the reception was excellent.
 reception
 
 I stayed up all night to see where the sun went, and then it dawned on me.
@@ -91,13 +91,13 @@ dawned
 A man broke his ankle while tap dancing in the sink.
 tap
 
-The earthquake in Washington obviously was the government’s fault.
+The earthquake in Washington obviously was the government's fault.
 fault
 
 Gardeners always know the ground rules.
 ground
 
-The coffee tasted like mud because it was fresh ground. 
+The coffee tasted like mud because it was fresh ground.
 ground
 
 I used to work for a blanket factory, but the company folded.
@@ -148,7 +148,7 @@ waste
 Broken calculators almost work, they just lose their figures.
 figure
 
-We’re going on a class trip to the Coca-Cola factory, hopefully there’s no pop quiz.
+We're going on a class trip to the Coca-Cola factory, hopefully there's no pop quiz.
 pop
 
 Old laser physicists never die, they just become incoherent.
@@ -169,13 +169,13 @@ still
 Old numerical analysts never die, they just get disarrayed.
 disarrayed
 
-Why is your hand similar to a hardware store? Because it has nails. 
+Why is your hand similar to a hardware store? Because it has nails.
 nails
 
 Old tanners never die, they just go into hiding.
 hiding
 
-All you can get from a pampered cow is spoiled milk. 
+All you can get from a pampered cow is spoiled milk.
 spoiled
 
 A hacker's relationship always ends in bits.
@@ -190,7 +190,7 @@ charge
 An expert farmer is very well known in his field.
 field
 
-I thought about becoming a witch, so I tried it for a spell. 
+I thought about becoming a witch, so I tried it for a spell.
 spell
 
 Celebrities are cool because of all their fans.
@@ -281,7 +281,7 @@ The math professor went crazy with the blackboard. He did a number on it.
 number
 
 What did the toy store sign say? Don't feed the animals. They are already stuffed.
-stuffed 
+stuffed
 
 The theory about earthquakes was shakey
 shakey
