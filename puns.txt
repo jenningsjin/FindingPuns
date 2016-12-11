@@ -167,15 +167,10 @@ She was only a whisky maker, but he loved her still.
 still
 
 Old numerical analysts never die, they just get disarrayed.
-<<<<<<< HEAD
-Why is your hand similar to a hardware store? Because it has nails.
-
-=======
 disarrayed
 
 Why is your hand similar to a hardware store? Because it has nails. 
 nails
->>>>>>> 5a1b6d68190956971138119b37c8afbd6045efe0
 
 Old tanners never die, they just go into hiding.
 hiding
@@ -226,15 +221,11 @@ The leopard moved away, so he changed his spots.
 spots
 
 Did you hear about the optician was giddy after only two glasses.
-<<<<<<< HEAD
-You must know lots to be an auctioneer.
-=======
 glasses
 
 You must know lots to be an auctioneer.
 lots
 
->>>>>>> 5a1b6d68190956971138119b37c8afbd6045efe0
 The wasp told the bee to buzz off.
 buzz
 

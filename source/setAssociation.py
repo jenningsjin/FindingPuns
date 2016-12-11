@@ -2,10 +2,16 @@ import sys
 import os
 import re
 
-def getData():
-    fileObj = open()
+def printList(list):
+    for item in list:
+        print item
 
-    return 
+def getData(filename):
+    fileObj = open(filename)
+    textList = fileObj.read()
+    textList = textList.split('\n\n')
+
+    return textList
 
 
 # Make the API call to google to figure out
@@ -44,4 +50,7 @@ def setCompareFeature(data):
     return
 
 if __name__ == "__main__":
-    print "Cheese"
+    filename = "../data/puns.txt"
+    dataList = getData(filename)
+
+    printList(dataList)
