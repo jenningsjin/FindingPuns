@@ -8,7 +8,7 @@ def normalize(weights, tot):
 	return normweights
 
 # given a list of sentences, which are represented as lists
-def sentenceindex(sentences):
+def sentenceIndex(sentences):
 	allweights = []
 
 	for line in sentences:
