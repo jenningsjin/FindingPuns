@@ -2,9 +2,12 @@ from nltk.corpus import wordnet
 from stop_words import get_stop_words
 import re
 
+
+
 puns = []
-with open('puns.txt') as f:
-    puns.extend(f.read().splitlines())
+with open('../data/puns.txt') as f:
+    for line in f:
+        puns.append(line)
 
 # lowercase, split on spaces and punctuation, and remove stopwords
 stopWords = get_stop_words('en')
