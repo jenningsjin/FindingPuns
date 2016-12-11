@@ -2,27 +2,8 @@ from nltk.corpus import wordnet
 from stop_words import get_stop_words
 import re
 
-
-
-puns = []
-with open('../data/puns.txt') as f:
-    for line in f:
-        puns.append(line)
-
-# lowercase, split on spaces and punctuation, and remove stopwords
-stopWords = get_stop_words('en')
-def tokenize(context):
-    # split on spaces, commmas, ?, and !
-    pattern = '\.|,| |\?|\!'
-    tokens = [token.lower() for token in re.split(pattern, context)
-              if token and token.lower() not in stopWords] 
-    return tokens
-
-test = puns[2]
-print(test)
-tokens = tokenize(test)
-print(tokens)
-
+def bagOfWordsSimilarityScore(self, tokens):
+    
 synsets = {}
 tokenTopScores = {}
 for token in tokens:
@@ -48,6 +29,3 @@ for token in tokens:
             print(synset.definition(), tokenTopScores[token][synset])
         currentMax = max(currentMax, tokenTopScores[token][synset])
     print('')
-
-
-

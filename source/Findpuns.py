@@ -7,8 +7,9 @@
 import sys
 import re
 from stop_words import get_stop_words
+from nltk.corpus import wordnet
 import numpy as np
-from sentenceIndex import sentenceIndex
+from sentenceindex import sentenceIndex
 # from ianFile import ianScoreFunction
 
 # constants
@@ -26,6 +27,8 @@ class FindPuns:
 		self.scores = []
 		# weights for the scores
 		self.W = []
+		# synsets
+		self.synsets = {}
 
 	def readInput(self):
 		# format of file repeats every 3 lines
@@ -42,15 +45,22 @@ class FindPuns:
 				# pun word
 				else:
 					self.y.append(line)
+		print(self.x)
 
 	# lowercases, splits on spaces and punctuation, and removes stopword
 	def tokenize(self, context):
 		# split on spaces, commas, ?, !, :, ;, ',
 		# update as necessary
-	    pattern = '\.|,| |\?|\!|\:|\;|\''
-	    return [token.lower() for token in re.split(pattern, context)
-				if token and token.lower() not in stopWords]
-		# TODO: maybe remove tokens that aren't in the dictionary (couldn't becomes couldn t)
+		pattern = '\.|,| |\?|\!|\:|\;|\''
+		tokens = re.split(pattern, context.lower())
+		for token in tokens:
+			# already looked it up
+			if token in self.synsets:
+				continue
+			synset = wordnet.synsets(token)
+			if len(token) > 1 and synset:
+				self.synsets[token] = synset
+		return [token for token in tokens if token in self.synsets]
 
 	def findPuns(self):
 		self.predictions = []
@@ -61,10 +71,7 @@ class FindPuns:
 			#scores.append(justinScoreFunction(tokens))
 			#scores.append(jenningsScoreFunction(tokens))
 			scores.append(sentenceIndex(tokens))
-			# lets try scoring to pick the last token
 			scores = self.squashAndNormalizeScores(scores)
-			print(tokens)
-			print(scores)
 			self.predictions.append(tokens[np.argmax(scores)])
 		totalCount = 0
 		wrongCount = 0
