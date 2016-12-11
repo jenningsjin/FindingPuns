@@ -8,20 +8,20 @@ def normalize(weights, tot):
 	return normweights
 
 # given a list of sentences, which are represented as lists
-def sentenceIndex(sentences):
+def sentenceIndex(line):
 	allweights = []
 
-	for line in sentences:
-		wordweights = []
-		linelen = len(line)
-		tot = 0
+	# for line in sentences:
+	wordweights = []
+	linelen = len(line)
+	tot = 0
 
-		for ind, word in enumerate(line):
-			# holds the sum of all weights
-			tot += math.pow(2, ind)
-			wordweights.append(math.pow(2, ind))
+	for ind, word in enumerate(line):
+		# holds the sum of all weights
+		tot += math.pow(2, ind)
+		wordweights.append(math.pow(2, ind))
 
-		allweights.append(normalize(wordweights, tot))
+	allweights.append(normalize(wordweights, tot))
 
 	return allweights
 

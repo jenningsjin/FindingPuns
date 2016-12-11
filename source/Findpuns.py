@@ -62,9 +62,9 @@ class FindPuns:
 			#scores.append(jenningsScoreFunction(tokens))
 			scores.append(sentenceIndex(tokens))
 			# lets try scoring to pick the last token
-			scores = [0]*len(tokens)
-			scores[-1] = 1
 			scores = self.squashAndNormalizeScores(scores)
+			print(tokens)
+			print(scores)
 			self.predictions.append(tokens[np.argmax(scores)])
 		totalCount = 0
 		wrongCount = 0
