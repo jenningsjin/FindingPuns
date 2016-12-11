@@ -9,9 +9,6 @@ def normalize(weights, tot):
 
 # given a list of sentences, which are represented as lists
 def sentenceIndex(line):
-	allweights = []
-
-	# for line in sentences:
 	wordweights = []
 	linelen = len(line)
 	tot = 0
@@ -21,9 +18,7 @@ def sentenceIndex(line):
 		tot += math.pow(2, ind)
 		wordweights.append(math.pow(2, ind))
 
-	allweights.append(normalize(wordweights, tot))
-
-	return allweights
+	return normalize(wordweights, tot)
 
 # if __name__ == '__main__':
 # 	test = [['word', 'is', 'funny', 'lol'],
