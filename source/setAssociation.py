@@ -2,6 +2,11 @@ import sys
 import os
 import re
 
+def getData():
+    fileObj = open()
+
+    return 
+
 
 # Make the API call to google to figure out
 # word the bigram score is
