@@ -8,6 +8,7 @@ import sys
 import re
 from stop_words import get_stop_words
 import numpy as np
+from sentenceIndex import sentenceIndex
 # from ianFile import ianScoreFunction
 
 # constants
@@ -59,7 +60,7 @@ class FindPuns:
 			#scores.append(graceScoreFunction(tokens))
 			#scores.append(justinScoreFunction(tokens))
 			#scores.append(jenningsScoreFunction(tokens))
-			#scores.append(wordLocationScoreFunction(tokens))
+			scores.append(sentenceIndex(tokens))
 			# lets try scoring to pick the last token
 			scores = [0]*len(tokens)
 			scores[-1] = 1
