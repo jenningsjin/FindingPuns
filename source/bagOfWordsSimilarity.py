@@ -1,31 +1,56 @@
 from nltk.corpus import wordnet
 from stop_words import get_stop_words
+import numpy as np
 import re
 
-def bagOfWordsSimilarityScore(self, tokens):
-    
-synsets = {}
-tokenTopScores = {}
-for token in tokens:
-    synsets[token] = wordnet.synsets(token)
-    tokenTopScores[token] = {}
+wordBags = {}
+pattern = '\(|\)|\.|,| |\?|\!|\:|\;|\''
+stopWords = get_stop_words('en')
+def bagOfWordsSimilarityScore(tokens, synsets):
+    # generate a bag of words for every token
+    for token in tokens:
+        if token in wordBags:
+            continue
+        wordBags[token] = []
+        for synset in synsets[token]:
+            words = re.split(pattern, synset.definition().lower())
+            # TODO: add in synset.examples()
+            words = [word for word in words if word and word not in stopWords]
+            wordBags[token].extend(words)
+    return scoreTokenSenses(tokens, synsets)
 
-for token in tokens:
-    for synset in synsets[token]:
-        tokenTopScores[token][synset] = 0
-        for otherToken in tokens:
-            if token == otherToken:
-                continue
-            maxScore = 0
-            for otherSynset in synsets[otherToken]:
-                maxScore = max(maxScore, synset.path_similarity(otherSynset))
-            tokenTopScores[token][synset] += maxScore
+def scoreTokenSenses(tokens, synsets):
+    scores = []
+    # for every sense of every token
+    for token in tokens:
+        scoresPerSense = []
+        for synset in synsets[token]:
+            currentTokenBag = re.split(pattern, synset.definition().lower())
+            currentTokenBag = [word for word in currentTokenBag if word and word not in stopWords]
+            senseScore = 0
+            # compare to bag of words of other tokens
+            for otherToken in tokens:
+                if token == otherToken:
+                    continue
+                wordBag = wordBags[token]
+                for word in currentTokenBag:
+                    if word in wordBag:
+                        senseScore += 1
+            scoresPerSense.append(senseScore)
+        npScores = np.array(scoresPerSense)
+        # sort high to low
+        npScores[::-1].sort()
+        if len(npScores) > 1:
+            scores.append(1-(npScores[0]-npScores[1])/float(npScores[0]))
+        else:
+            # TODO check this for a reasonable value
+            scores.append(0.3)
+    s = np.array(scores)
+    s = s / np.sum(s)
+    return s.tolist()
 
-for token in tokens:
-    print(token)
-    currentMax = 0
-    for synset in synsets[token]:
-        if tokenTopScores[token][synset] > currentMax:
-            print(synset.definition(), tokenTopScores[token][synset])
-        currentMax = max(currentMax, tokenTopScores[token][synset])
-    print('')
+    # for token in tokens:
+    #     print('$$$$$$$ ' + token + ' $$$$$$$$$$$$$$$$$')
+    #     for synset in synsets[token]:
+    #         print(synset)
+    #         print(senseScores[token][synset])
