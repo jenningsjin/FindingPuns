@@ -10,6 +10,7 @@ from stop_words import get_stop_words
 from nltk.corpus import wordnet
 import numpy as np
 from sentenceindex import sentenceIndex
+from simScores import simScores
 # from ianFile import ianScoreFunction
 
 # constants
@@ -67,7 +68,7 @@ class FindPuns:
 		for tokens in self.x:
 			scores = []
 			#scores.append(ianScoreFunction(tokens))
-			#scores.append(graceScoreFunction(tokens))
+			scores.append(simScores(tokens))
 			#scores.append(justinScoreFunction(tokens))
 			#scores.append(jenningsScoreFunction(tokens))
 			scores.append(sentenceIndex(tokens))
