@@ -2,6 +2,7 @@ import sys
 import os
 import re
 import json
+import operator
 import requests
 import itertools
 
@@ -40,9 +41,6 @@ def checkAssociationBatch(bigramList):
 
     bigramStrings = [pair[0] + ' ' + pair[1] for pair in  bigramList]
 
-    # query = """{{\"queries\": [\"{0} {1}\"] }}""".format(word1, word2)
-
-
     query = "{\"queries\":" + str(bigramStrings) + "}"  
     r = requests.post(requestURL, headers=headers, data=query)
     
@@ -57,35 +55,33 @@ def checkAssociationBatch(bigramList):
             outputMap[pair] = float(data['probability'])
 
     return outputMap
-    # return r.json()['results'][0]['probability']    
 
 
 # Given the Sentence, get the scores for each bigram
 # in the sentence
 def getSentenceScores(sentenceList):
-    scoreMap = {}
     permutationList = list(itertools.permutations(sentenceList, 2))
-    for bigram in permutationList:
-        word1 = bigram[0]
-        word2 = bigram[1]
+    # print permutationList
+    bigramScores = checkAssociationBatch(permutationList)
+    sortedScores = sorted(bigramScores.items(), key=lambda x:x[1], reverse=True)
 
-        print word1 +  ' | ' + word2
-    #     score = checkAssocation(word1, word2)
-    #     bigram = (word1, word2)
+    # printList(sortedScores)
 
-    #     if not scoreMap.get(bigram):
-    #         scoreMap[bigram] = score
-    # return scoreMap
+    #At this point we can decide what metric determines how many we take e.g. Threshold
+    #but here I've just gone with the top 2
+    # sortedScores = sortedScores[:2]
+    wordSet = set(list(sortedScores[0][0]) + list(sortedScores[1][0]))
+    weightVector = []
+    if len(wordSet) == 3:
+        for word in sentenceList:
+            if word in wordSet:
+                weightVector.append(.2)
+            else:
+                weightVector.append(0.0)
 
-
-
-# Find the Word that appears in the highest number of 
-# high scoring sets
-def setCompare(scores):
-    return
-
-
-
+        return weightVector
+    else:
+        return [0.0]*len(sentenceList)
 if __name__ == "__main__":
     filename = "../data/puns.txt"
     dataList = getData(filename)
@@ -94,5 +90,6 @@ if __name__ == "__main__":
     # print getSentenceScores("A dog gave birth to puppies near the road and was cited for littering.".split(' '))
     # print getSentenceScores("A dog gave bircth to puppies".split(' '))
     listo = [('A', 'dog'), ('A', 'gave'), ('A', 'birth'), ('A', 'to'), ('A', 'puppies'), ('A', 'near'), ('A', 'the')]
+    listo2 = ["elephant's", "opinion", "carries", "weight"]
 
-    print checkAssociationBatch(listo)
+    print getSentenceScores(listo2)
