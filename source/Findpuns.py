@@ -12,6 +12,7 @@ import numpy as np
 from sentenceindex import sentenceIndex
 from simScores import simScores
 from bagOfWordsSimilarity import bagOfWordsSimilarityScore
+from ngramsOfSynonyms import ngramsOfSynonymsSimilarityScore
 
 # constants
 pathToPuns = '../data/puns.txt'
@@ -69,7 +70,7 @@ class FindPuns:
 			scores = []
 			scores.append(simScores(tokens))
 			scores.append(bagOfWordsSimilarityScore(tokens, self.synsets))
-			#scores.append(justinScoreFunction(tokens))
+			#scores.append(ngramsOfSynonymsSimilarityScore(tokens))
 			#scores.append(jenningsScoreFunction(tokens))
 			scores.append(sentenceIndex(tokens))
 			scores = self.squashAndNormalizeScores(scores)
