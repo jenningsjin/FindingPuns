@@ -11,10 +11,11 @@ from nltk.corpus import wordnet
 import numpy as np
 from sentenceindex import sentenceIndex
 from simScores import simScores
-# from ianFile import ianScoreFunction
+from bagOfWordsSimilarity import bagOfWordsSimilarityScore
 
 # constants
 pathToPuns = '../data/puns.txt'
+pathToShortPuns = '../data/shortPuns.txt'
 stopWords = get_stop_words('en')
 class FindPuns:
 	def __init__(self):
@@ -34,7 +35,7 @@ class FindPuns:
 	def readInput(self):
 		# format of file repeats every 3 lines
 		# 1. pun 2. pun word 3. blank line
-		with open('../data/puns.txt') as f:
+		with open(pathToPuns) as f:
 			for line in f.read().splitlines():
 				# ignore blank lines
 				if not line:
@@ -46,7 +47,6 @@ class FindPuns:
 				# pun word
 				else:
 					self.y.append(line)
-		print(self.x)
 
 	# lowercases, splits on spaces and punctuation, and removes stopword
 	def tokenize(self, context):
@@ -61,14 +61,14 @@ class FindPuns:
 			synset = wordnet.synsets(token)
 			if len(token) > 1 and synset:
 				self.synsets[token] = synset
-		return [token for token in tokens if token in self.synsets]
+		return [token for token in tokens if token not in stopWords and token in self.synsets]
 
 	def findPuns(self):
 		self.predictions = []
 		for tokens in self.x:
 			scores = []
-			#scores.append(ianScoreFunction(tokens))
 			scores.append(simScores(tokens))
+			scores.append(bagOfWordsSimilarityScore(tokens, self.synsets))
 			#scores.append(justinScoreFunction(tokens))
 			#scores.append(jenningsScoreFunction(tokens))
 			scores.append(sentenceIndex(tokens))

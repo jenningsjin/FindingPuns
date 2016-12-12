@@ -51,27 +51,28 @@ def simScores(line):
 	wordweights = []
 	for token in line:
 		tokensenses = []
-		senseweight = 0
+		weight = 0
 
 		for ss in senses[token]:
 
 			for othertoken in line:
 				if token != othertoken:
 					for otherss in senses[othertoken]:
-						senseweight += max(0, ss.path_similarity(otherss))
+						weight += max(0, ss.path_similarity(otherss))
 
-			tokensenses.append(senseweight)
-			senseweight = 0
+		# 	tokensenses.append(senseweight)
+		# 	senseweight = 0
 
-		weight = analyzesenses(tokensenses)
-		wordweights.append(analyzesenses(tokensenses))
+		# weight = analyzesenses(tokensenses)
+		# wordweights.append(analyzesenses(tokensenses))
 						# print token + ", " + othertoken
 						# print max(0, ss.path_similarity(otherss))
 						
 
-		# if len(senses[token]) > 0:
-		# 	weight = float(weight)/len(senses[token])
-		# wordweights.append(weight)
+		if len(senses[token]) > 0:
+			weight = float(weight)/len(senses[token])
+		wordweights.append(weight)
 		tot += weight
-
+	#print normalize(wordweights, tot)
 	return normalize(wordweights, tot)
+	
