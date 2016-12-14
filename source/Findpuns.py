@@ -37,7 +37,7 @@ class FindPuns:
 	def readInput(self):
 		# format of file repeats every 3 lines
 		# 1. pun 2. pun word 3. blank line
-		with open(pathToShortPuns) as f:
+		with open(pathToPuns) as f:
 			for line in f.read().splitlines():
 				# ignore blank lines
 				if not line:
@@ -83,11 +83,11 @@ class FindPuns:
 		for p, target in zip(self.predictions, self.y):
 			if p != target:
 				wrongCount += 1
-			if p == target:
-				print(self.input[totalCount])
-			print(p, target)
+			#if p == target:
+			#	print(self.input[totalCount])
+			#print(p, target)
 			totalCount += 1
-		#print('total count is ' + str(totalCount) + ' wrong ' + str(wrongCount))
+		print('total count is ' + str(totalCount) + ' wrong ' + str(wrongCount))
 
 	# scores is a 2d vector, each row contains scores from a separate scoring function
 	def squashAndNormalizeScores(self, scores):
