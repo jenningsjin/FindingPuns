@@ -13,6 +13,7 @@ from sentenceindex import sentenceIndex
 from simScores import simScores
 from bagOfWordsSimilarity import bagOfWordsSimilarityScore
 from ngramsOfSynonyms import ngramsOfSynonymsSimilarityScore
+from setAssociation import getSentenceScores
 
 # constants
 pathToPuns = '../data/puns.txt'
@@ -36,7 +37,7 @@ class FindPuns:
 	def readInput(self):
 		# format of file repeats every 3 lines
 		# 1. pun 2. pun word 3. blank line
-		with open(pathToPuns) as f:
+		with open(pathToShortPuns) as f:
 			for line in f.read().splitlines():
 				# ignore blank lines
 				if not line:
@@ -70,18 +71,23 @@ class FindPuns:
 			scores = []
 			scores.append(simScores(tokens))
 			scores.append(bagOfWordsSimilarityScore(tokens, self.synsets))
-			#scores.append(ngramsOfSynonymsSimilarityScore(tokens))
-			#scores.append(jenningsScoreFunction(tokens))
+			scores.append(ngramsOfSynonymsSimilarityScore(tokens))
+			scores.append(getSentenceScores(tokens))
 			scores.append(sentenceIndex(tokens))
 			scores = self.squashAndNormalizeScores(scores)
 			self.predictions.append(tokens[np.argmax(scores)])
+			#print(tokens)
+			#print(scores)
 		totalCount = 0
 		wrongCount = 0
 		for p, target in zip(self.predictions, self.y):
-			totalCount += 1
 			if p != target:
 				wrongCount += 1
-		print('total count is ' + str(totalCount) + ' wrong ' + str(wrongCount))
+			if p == target:
+				print(self.input[totalCount])
+			print(p, target)
+			totalCount += 1
+		#print('total count is ' + str(totalCount) + ' wrong ' + str(wrongCount))
 
 	# scores is a 2d vector, each row contains scores from a separate scoring function
 	def squashAndNormalizeScores(self, scores):
